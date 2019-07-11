@@ -9,33 +9,105 @@
     <title>Crystals Collector Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col crystal">Crystals Collector!</div>
+        </div>
+
+
+
+
+        <div class="row">
+
+            <div class="col instructions">
+                How to play the game:
+                <br>
+                You will be given a random number at the start of the game.
+                <br>
+                There are four crystals below. By clicking on the a crystal you will add a specific amount of point
+                to
+                your
+                total score.
+                <br>
+                You win the game by matching your total score to the random number, you lose the game if your total
+                score goes
+                above the random number.
+                <br>
+                The value of each crystal is hidden from you until you click on it.
+                <br>
+                Each time when the game starts, the game will change the values of each crystal.
+
+            </div>
 
         </div>
-        <col-lg-2></col-lg-2>
+
+
+        <!-- Comuter's random generated number box-->
+        <div class="row">
+            <div class="col randomNumberBox">
+                <h4>Crystals to Collect (Random Number) </h4>
+                <h3 id="randomNumber">Random Number here!</h3>
+            </div>
+            <!-- wins and loss tally -->
+            <div class="col computerScore">
+                <h5 id="wins">Wins: </h5>
+                <h5 id="losses">Losses: </h5>
+            </div>
+
+        </div>
+
+        <!-- Win or loss will show up here "You lose!" or "You win!" -->
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" id="gameOutcome">You win or lose here!</div>
+            <div class="col"></div>
+        </div>
+
+        <!-- Cystals here -->
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" id="GemOne"><img src="assets/images/001-gem.png" alt="Crystal 1" width="100" height="auto">
+            </div>
+            <div class="col" id="GemTwo"><img src="assets/images/002-gem.png" alt="Crystal 2" width="100" height="auto">
+            </div>
+            <div class="col" id="GemThree"><img src="assets/images/003-gem.png" alt="Crystal 3" width="100"
+                    height="auto"></div>
+            <div class="col" id="GemFour"><img src="assets/images/004-gem.png" alt="Crystal 4" width="100"
+                    height="auto"></div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col scoreBox">Your score is:</div>
+            <div class="col"></div>
+        </div>
+        <!-- This is where the player's points/score will show -->
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" id="playerScore">SCORE HERE!</div>
+            <div class="col"></div>
+        </div>
+
+
     </div>
 
-    <p>
-        You will be given a random number at the start of the game.
-        <br>
-        There are four crystals below. By clicking on the a crystal you will add a specific amount of point to your
-        total score.
-        <br>
-        You win the game by matching your total score to the random number, you lose the game if your total score goes
-        above the random number.
-        <br>
-        The value of each crystal is hidden from you until you click on it.
-        <br>
-        Each time when the game starts, the game will change the values of each crystal.
-    </p>
 
-
+    <footer>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            messages.attribution.is_licensed_by <a href="http://creativecommons.org/licenses/by/3.0/"
+                title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </body>
 
 </html>

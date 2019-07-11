@@ -1,0 +1,90 @@
+body {
+    background-image: url(../images/fancy-cushion.png);
+}
+
+
+/*heading 'Crystal Collector'*/
+.crystal {
+    text-align: center;
+    background: cadetblue;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 45px;
+}
+
+/* instructions*/
+.instructions {
+background: cadetblue;
+margin-bottom: 15px;
+padding: 15px;
+line-height: 20px;
+}
+
+/*computer random number box*/
+.randomNumberBox {
+    background: cadetblue;
+    color: white;
+    margin-right: 10px;
+    margin-left: 0px;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+#randomNumber {
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 5px;
+}
+
+/*computer score box*/
+.computerScore {
+    background: cadetblue;
+    color: white;
+    text-align: center;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 15px 0px;
+}
+
+#gameOutcome {
+    background: bisque;
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/*'Your score is:' text box */
+.scoreBox {
+    background: cadetblue;
+    margin-top: 15px;
+    text-align: center;
+    padding: 15px;
+}
+
+#playerScore {
+    background: cadetblue;
+margin-top: 15px;
+font-size: 40px;
+height: auto;
+text-align: center;
+padding: 15px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: white;
+margin-bottom: 50px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #666666;
+    color: lightgrey;
+    font-size: 10px;
+    border-top: 4px solid #4aaaa5;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
