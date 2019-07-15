@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-    //variables
+    //VARIABLES
+
     //wins or losses counter:
     let winsCounter = 0;
     let lossCounter = 0;
@@ -16,16 +17,18 @@ $(document).ready(function () {
     //set game state
     let gameOver = true;
 
-    //TODO:- double check game functions as it should
 
+    //FUNCTIONS
 
     //check that the user's score is less than the random number generated and if it is less  
     //then the numbers will continue to the array 
-    let checkMyTotal = function (parameterOne) {
+    let checkMyTotal = function (userScore) {
+        //as well as if the game is not over it will push to the array
         if (calculateTotal() < compRandomNum && gameOver === false) {
             //then the random number will be pushed to the array
-            crystalGuessArray.push(parameterOne);
+            crystalGuessArray.push(userScore);
         }
+        //else, if the user's total is = to or greater than the game state, gaveOver is true.
         else {
             gameOver = true;
 
@@ -55,6 +58,7 @@ $(document).ready(function () {
             $("#wins").text("Wins: " + winsCounter);
             //state of the game set to true
             gameOver = true;
+
         }
         //If their score is greater than the randonNumber => 'You lose, try again!' and losses will increase by 1
         if (calculateTotal() > compRandomNum) {
@@ -63,38 +67,39 @@ $(document).ready(function () {
             $("#losses").text("Losses: " + lossCounter);
             //state of the game set to true
             gameOver = true;
+
         }
     };
+    //FIXME: Note to TA: At end of game need to get wins / losses to stop counting when clicking crystals
+    //have not been able to come up with a solution for this to stop happening. I've tried mutiple things that 
+    //ended up breaking other things in the game. This was the best solution with the least bugs.
+
 
 
     //reset game for new play. Game message banner reads: "You win/lose, click here to play again"
     let resetGame = (function () {
-        //if state of game is true, then
+        //if state of game, gaveOver is true, then:
         if (gameOver === true) {
             compRandomNum = Math.floor(Math.random() * 102) + 19;
             //new random number is generated
-            //FIXME: not generating random number upon click to reset game
             $("#randomNumber").html(compRandomNum);
             //the players score resets message to "Your Score"
             $("#playerScore").text("Your score");
             //guess array clears to reset game
             crystalGuessArray = [];
+            //new random numbers are generated for the crystals
             crystalRandonNumOne = Math.floor(Math.random() * 12) + 1;
             crystalRandonNumTwo = Math.floor(Math.random() * 12) + 1;
             crystalRandonNumThree = Math.floor(Math.random() * 12) + 1;
             crystalRandonNumFour = Math.floor(Math.random() * 12) + 1;
 
         }
-
     });
-
-
 
     //to start the game the game message banner is clicked 
     $("#gameOutcome").click(function () {
 
         if (gameOver === false) {
-
 
             // random number of 'cystals' is generated and placed in the 'Crystals to collect' box
             $("#randomNumber").html(compRandomNum);
@@ -102,32 +107,28 @@ $(document).ready(function () {
             //Message banner changes with new instructions:
             $("#gameOutcome").text("Click the crystals to match the number above");
 
-
         }
         else {
-            // compRandomNum = Math.floor(Math.random() * 102) + 19;
-            //call reset game function
+            //else, if gameOver === true , then call reset game function
             resetGame();
+            //game state is set back to false as the game is not over
             gameOver = false;
-            //       message banner changes with what to do next
+            //message banner changes with what to do next
             $("#gameOutcome").text("Click the crystals to match the number above");
         }
     });
 
     //When one of the crystals is 'clicked' a random number (1-12) will be genarated
     $('#GemOne').click(function () {
-        console.log('Gameover: ' + gameOver);
-        // if (gameOver === false) {
 
+        //randomNumber is pushed to the array as GemOne is clicked
         checkMyTotal(crystalRandonNumOne);
         //and as the crystals are clicked the #playerScore will increase
         $("#playerScore").text(calculateTotal());
         //call win/lose function
         winOrLose();
-        // }
-        // else {
-        //     $('#GemOne').off("click");
-        // }
+
+
     });
     //click event for GemTwo same functions as GemOne
     $('#GemTwo').click(function () {
