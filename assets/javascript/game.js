@@ -46,6 +46,8 @@ $(document).ready(function () {
 
 
 
+
+
     //function created to handle what happens when the user wins or loses
     let winOrLose = function () {
         //The user will keep clicking the crystals until it matches the randomNumber without going over
@@ -69,10 +71,13 @@ $(document).ready(function () {
             gameOver = true;
 
         }
-    };
+    }
+
     //FIXME: Note to TA: At end of game need to get wins / losses to stop counting when clicking crystals
     //have not been able to come up with a solution for this to stop happening. I've tried mutiple things that 
     //ended up breaking other things in the game. This was the best solution with the least bugs.
+
+
 
 
 

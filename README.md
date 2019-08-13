@@ -6,3 +6,5 @@ Match the number of crystals to collect and you win the game. Exceed them and yo
 
 *There is currently an issue with the game in that once the game has ended and you keep clicking on the 
 crystals the win or loss continues to add up. This will need to be debugged.*
+
+Deployed game: https://whitingba.github.io/unit-4-game/
