@@ -1,6 +1,6 @@
 
 
-# Unit 4: Cyrstal Collector
+# Crystal Collector
 
 ### Background
 Week 4 added jquery to the mix. Crystal Collector is a game in which you collect crystals by clicking on the crystals to increase your score to match
