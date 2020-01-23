@@ -13,7 +13,7 @@ Deployed game: https://whitingba.github.io/Cystal-Collector/
 
 ##### Game in play
 
-![Image of main html page]()
+![Image of game](https://github.com/whitingba/Cystal-Collector/blob/master/assets/images/gameScreenshot.PNG)
 
 
 
